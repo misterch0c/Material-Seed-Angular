@@ -20,6 +20,7 @@
     <!-- endbuild -->
   </head>
   <body ng-cloak ng-app="materialSeed" ng-controller="AppCtrl">
+  <!--<ng-view></ng-view>-->
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -29,10 +30,9 @@
 
 
 <div >
-
 <div layout="column" layout-fill>
-  <md-toolbar>
-    <div class="md-toolbar-tools">
+  <md-toolbar> 
+    <div class="md-toolbar-tools ">
       <span>Material seed</span>
       <!-- fill up the space between left and right area -->
       <span flex></span>
@@ -54,6 +54,13 @@
         <md-content class="md-padding">
           <h1 class="md-display-2">Tab One</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+           <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button class="md-raised">Button</md-button>
+      <md-button class="md-raised md-primary">Primary</md-button>
+      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+      <md-button class="md-raised md-warn">Warn</md-button>
+      <div class="label">Raised</div>
+    </section>
         </md-content>
       </md-tab>
       <md-tab label="two">
@@ -92,17 +99,17 @@
   </md-content>
 
 
-<div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak >
+<div ng-controller="RightCtrl" layout="column" style="height:500px;" ng-cloak  >
     <section layout="row" flex >
 
-    <md-content flex layout-padding>
+    <md-content flex layout-padding >
       <div flex></div>
     </md-content ng-cloak>
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" ng-cloak>
+    <md-sidenav  class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-swipe-right="close()">
       <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools" ng-cloak>Sidenav Right</h1>
+        <h1 class="md-toolbar-tools" >Sidenav Right</h1>
       </md-toolbar>
-      <md-content ng-controller="RightCtrl" layout-padding>
+      <md-content ng-controller="RightCtrl" layout-padding >
         <form>
           <md-input-container>
             <label for="testInput">Test input</label>
@@ -110,8 +117,8 @@
                    ng-model="data" md-sidenav-focus>
           </md-input-container>
         </form>
-        <md-button ng-click="close()" class="md-primary">
-          Close Sidenav Right
+        <md-button ng-click="close()" class="md-primary"   >
+          Click or slide to close
         </md-button>
       </md-content>
     </md-sidenav>
@@ -119,13 +126,7 @@
 </div>
 
 
-    <section layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-raised">Button</md-button>
-      <md-button class="md-raised md-primary">Primary</md-button>
-      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-      <md-button class="md-raised md-warn">Warn</md-button>
-      <div class="label">Raised</div>
-    </section>
+   
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -157,6 +158,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/user.js"></script>
         <!-- endbuild -->
 </body>
 </html>

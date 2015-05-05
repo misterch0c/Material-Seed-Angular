@@ -28,7 +28,6 @@ angular
     })
     .controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdUtil, $log) {
         console.log("hey");
-        $scope.toggleLeft = buildToggler('left');
         $scope.toggleRight = buildToggler('right');
         /**
          * Build handler to open/close a SideNav; when animation finishes
