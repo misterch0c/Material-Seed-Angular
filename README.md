@@ -1,6 +1,7 @@
 # Material Angular Seed (using Yeoman generator)
 
 
+![scr](http://i.imgur.com/xvvrk7x.png "scr")
 
 ## Usage
 
@@ -161,3 +162,6 @@ angular.module('myMod').config(function ($provide) {
   });
 ```
 
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
